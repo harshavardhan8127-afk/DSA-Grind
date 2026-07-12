@@ -2,12 +2,15 @@ class Solution {
     public int[] arrayRankTransform(int[] arr) {
 
         int[] res = new int[arr.length];
-        int[] cpy = arr.clone();
 
-        Arrays.sort(cpy);
+        for(int i=0;i<arr.length;i++){
+            res[i] = arr[i];
+        }
+        Arrays.sort(res);
+
         HashMap<Integer,Integer> map = new HashMap<>();
 
-        for(int n : cpy){
+        for(int n : res){
             if(!map.containsKey(n)){
                 map.put(n,map.size()+1);
             }
