@@ -1,14 +1,14 @@
 class Solution {
     public int[] arrayRankTransform(int[] arr) {
 
+         HashMap<Integer,Integer> map = new HashMap<>();
+
         int[] res = new int[arr.length];
 
         for(int i=0;i<arr.length;i++){
             res[i] = arr[i];
         }
         Arrays.sort(res);
-
-        HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int n : res){
             if(!map.containsKey(n)){
