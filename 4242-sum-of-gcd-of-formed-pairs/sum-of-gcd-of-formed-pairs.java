@@ -11,9 +11,7 @@ class Solution {
             perfectGCD[i] = GCD(nums[i],mx);
         }
         Arrays.sort(perfectGCD);
-        System.out.println(Arrays.toString(perfectGCD));
-
-
+      
         long sum = 0;
         int l = 0;
         int r = perfectGCD.length - 1;
@@ -28,12 +26,10 @@ class Solution {
         
     }
     public int GCD(int x,int y){
-        while (y!=0){
-            int temp = y;
-            y = x%y;
-            x = temp;
-        }
-
+       if(y==0){
         return x;
+       }
+
+       return GCD(y,x%y);
     }
 }
