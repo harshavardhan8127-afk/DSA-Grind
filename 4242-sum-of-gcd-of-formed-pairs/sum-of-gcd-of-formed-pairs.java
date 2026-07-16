@@ -19,15 +19,7 @@ class Solution {
         int r = perfectGCD.length - 1;
 
         while(l<r){
-            if(perfectGCD[l]!=perfectGCD[r]){
-                int x = GCD(perfectGCD[l],perfectGCD[r]);
-                sum += x;
-            }
-            else{
-                int y = GCD(perfectGCD[l],perfectGCD[r]);
-                sum += y;
-            }
-
+            sum += GCD(perfectGCD[l],perfectGCD[r]);
             l++;
             r--;
 
