@@ -1,8 +1,6 @@
 class Solution {
     public int subsetXORSum(int[] nums) {
 
-        int xor = 0;
-
         return helper(nums,0,0);
     }
     static int helper(int[] nums,int index,int xor){
