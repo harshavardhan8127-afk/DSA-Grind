@@ -17,7 +17,7 @@ class Solution {
     int diameter = 0;
     public int diameterOfBinaryTree(TreeNode root) {
         height(root);
-        return diameter - 1;
+        return diameter;
     }
     public int height(TreeNode node){
         if(node == null){
@@ -27,7 +27,7 @@ class Solution {
         int leftHei = height(node.left);
         int rightHei = height(node.right);
 
-        int dia = leftHei + rightHei + 1;
+        int dia = leftHei + rightHei;
         diameter = Math.max(diameter,dia);
 
         return Math.max(leftHei,rightHei) + 1;
