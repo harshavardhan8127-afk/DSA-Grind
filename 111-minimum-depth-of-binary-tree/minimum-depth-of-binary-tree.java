@@ -30,10 +30,7 @@ class Solution {
             return minDepth(root.left) + 1;
         }
 
-        int left = minDepth(root.left);
-        int right = minDepth(root.right);
-
         //minDepth we use the Math.min()
-        return Math.min(left,right) + 1;
+        return Math.min(minDepth(root.left),minDepth(root.right)) + 1;
     }
 }
